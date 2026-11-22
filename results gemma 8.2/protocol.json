@@ -1,0 +1,61 @@
+{
+  "schema": 1,
+  "model": "Qwen/Qwen3.5-9B",
+  "modelopt": "d7cbff3486a3ffb1a357e32d9810da0bfc649709",
+  "lmms": "9466a70af5086fc0b8ebcc785d8f105e65240fdc",
+  "omni_evaluator": "f133a71e9e91c3621c7ce8994200a7b394a06eb3",
+  "vllm": "0.31.0",
+  "seed": 20261018,
+  "policies": {
+    "P0": [],
+    "P1": [
+      "D"
+    ],
+    "P2": [
+      "A"
+    ],
+    "P3": [
+      "G"
+    ],
+    "P4": [
+      "D",
+      "A"
+    ],
+    "P5": [
+      "D",
+      "G"
+    ],
+    "P6": [
+      "A",
+      "G"
+    ],
+    "P7": [
+      "D",
+      "A",
+      "G"
+    ]
+  },
+  "full_samples_per_task": 200,
+  "timing_samples_per_task": 40,
+  "additional_repeats": 2,
+  "pilot_samples_per_task": 6,
+  "calibration_samples": 256,
+  "context": 16384,
+  "max_pixels": 1003520,
+  "min_pixels": 65536,
+  "kv_cache_bytes": 2147483648,
+  "cache_dtype": "bfloat16",
+  "max_tokens": {
+    "textvqa": 128,
+    "chartqa": 16,
+    "mmstar": 128,
+    "omnidoc_ocr": 2048
+  },
+  "omni_scope": "longest eligible horizontal text block per page; cropped OCR only; not full-page overall",
+  "acceptance": "native MTP; no tolerance or sample exclusions",
+  "mtp_equivalence": "exact token match recorded per case; whitespace-only divergence that does not lower the score is reported but does not block",
+  "quality_screening_budget": 0.01,
+  "heldout_samples_per_task": 40,
+  "replay_scope": "fixed-prefix continuation, first native verification step; not full teacher-forced replay",
+  "pilot_gate": "all policies load; preserved precisions; finite metrics; no score-changing token mismatches"
+}
