@@ -1,0 +1,26 @@
+# vLLM is the serving version audited for token IDs and native per-request MTP metrics.
+vllm==0.31.0
+accelerate>=1.0
+transformers>=5.5,<5.19
+datasets>=3.0
+huggingface-hub>=0.24
+safetensors
+Pillow
+PyYAML>=6
+numpy
+pandas
+matplotlib
+python-Levenshtein
+psutil
+compressed-tensors
+fire
+mlflow-skinny>=2.9
+transformers-stream-generator
+zstandard
+diffusers>=0.32.2
+peft>=0.17
+sentencepiece>=0.2.1
+tiktoken
+nltk
+wonderwords
+flashinfer-cubin==0.7.0.post1
