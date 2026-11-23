@@ -1,0 +1,74 @@
+imports:
+  fp8: configs/numerics/fp8
+  nvfp4: configs/numerics/nvfp4
+metadata:
+  recipe_type: ptq
+  description: QSpec family run GF4 (D+A fp8)
+quantize:
+  algorithm:
+    method: max
+  quant_cfg:
+  - quantizer_name: '*'
+    enable: false
+  - quantizer_name: '*layers.*.mlp.gate_proj*weight_quantizer'
+    cfg:
+      $import: fp8
+  - quantizer_name: '*layers.*.mlp.gate_proj*input_quantizer'
+    cfg:
+      $import: fp8
+  - quantizer_name: '*layers.*.mlp.up_proj*weight_quantizer'
+    cfg:
+      $import: fp8
+  - quantizer_name: '*layers.*.mlp.up_proj*input_quantizer'
+    cfg:
+      $import: fp8
+  - quantizer_name: '*layers.*.mlp.down_proj*weight_quantizer'
+    cfg:
+      $import: fp8
+  - quantizer_name: '*layers.*.mlp.down_proj*input_quantizer'
+    cfg:
+      $import: fp8
+  - quantizer_name: '*layers.*.self_attn.q_proj*weight_quantizer'
+    cfg:
+      $import: fp8
+  - quantizer_name: '*layers.*.self_attn.q_proj*input_quantizer'
+    cfg:
+      $import: fp8
+  - quantizer_name: '*layers.*.self_attn.k_proj*weight_quantizer'
+    cfg:
+      $import: fp8
+  - quantizer_name: '*layers.*.self_attn.k_proj*input_quantizer'
+    cfg:
+      $import: fp8
+  - quantizer_name: '*layers.*.self_attn.v_proj*weight_quantizer'
+    cfg:
+      $import: fp8
+  - quantizer_name: '*layers.*.self_attn.v_proj*input_quantizer'
+    cfg:
+      $import: fp8
+  - quantizer_name: '*layers.*.self_attn.o_proj*weight_quantizer'
+    cfg:
+      $import: fp8
+  - quantizer_name: '*layers.*.self_attn.o_proj*input_quantizer'
+    cfg:
+      $import: fp8
+  - quantizer_name: '*mtp*'
+    enable: false
+  - quantizer_name: '*lm_head*'
+    enable: false
+  - quantizer_name: '*embed_tokens*'
+    enable: false
+  - quantizer_name: '*visual*'
+    enable: false
+  - quantizer_name: '*vision*'
+    enable: false
+  - quantizer_name: '*linear_attn.in_proj_a*'
+    enable: false
+  - quantizer_name: '*linear_attn.in_proj_b*'
+    enable: false
+  - quantizer_name: '*conv1d*'
+    enable: false
+  - quantizer_name: '*norm*'
+    enable: false
+  - quantizer_name: '*audio*'
+    enable: false
