@@ -1,0 +1,6 @@
+{
+  "state": "partial",
+  "mode": "fam_gemma",
+  "stage": "Finished with 4 job(s) not done: ['GF1:K2:fam', 'GF1:K0:fam', 'GF4:K0:fam', 'GF4:K2:fam']",
+  "saved_records": 2322
+}
