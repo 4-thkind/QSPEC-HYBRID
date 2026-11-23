@@ -1,0 +1,22 @@
+{
+  "artifact": "QSpec Hybrid Molab/marimo",
+  "date": "2026-10-18",
+  "authoring_platform": "macOS ARM64, no NVIDIA GPU",
+  "cpu_tests": {
+    "passed": 47,
+    "failed": 0,
+    "scope": "CPU contracts, actual CPU safetensors audits, pinned scoring definitions, simulated streaming and mocked pilot/full/resume. These are not model benchmark results.",
+    "upstream_warnings": "Four SyntaxWarning notices arise from preserved OmniDocBench source escape sequences. No upstream source was rewritten to hide them."
+  },
+  "static_python_checks": "passed",
+  "marimo_format_check": "passed",
+  "idle_notebook_execution": "passed: standalone app.run(), fresh support extraction, recovery notebook reconstruction; no worker, setup or model download",
+  "idle_notebook_export": "passed",
+  "rendered_idle_ui": "visually inspected in browser: two run modes, progress, saved-record count, logs and download controls; no GPU actions executed",
+  "gpu_validated": false,
+  "live_dataset_download_validated": false,
+  "real_selective_ptq_export_validated": false,
+  "full_teacher_forced_mtp_replay": false,
+  "state_only_gpu_latency": "unavailable; not equated to residual overhead",
+  "required_next_check": "Run Pilot test on the attached SM120 Molab GPU; full scale is gated."
+}
