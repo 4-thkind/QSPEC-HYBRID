@@ -1,0 +1,80 @@
+{
+  "preregistration": {
+    "written": "2026-11-10, before any fresh-sample generation",
+    "question": "Do the fast policies stay within a fixed quality tolerance of BF16 on unseen inputs?",
+    "policies": [
+      "P1",
+      "P7"
+    ],
+    "reference": "P0",
+    "decoding": "native MTP, K=2, for every policy (matched mode)",
+    "tasks": {
+      "mmstar": {
+        "metric": "mc_accuracy",
+        "margin": 0.02,
+        "sample_cap": 1000
+      },
+      "chartqa": {
+        "metric": "relaxed_accuracy",
+        "margin": 0.02,
+        "sample_cap": 1000
+      },
+      "omnidoc_ocr": {
+        "metric": "normalized edit distance (lower is better)",
+        "margin": 0.01,
+        "sample_cap": 500
+      }
+    },
+    "test": "paired difference (policy minus BF16, oriented so negative is worse); non-inferior when the lower bound of the two-sided 95% paired bootstrap interval (10,000 resamples, seed 20261018) is above minus the margin",
+    "multiplicity": "Holm correction across the 6 policy x task tests, reported alongside the unadjusted intervals",
+    "sampling": "all eligible rows not used by the main study (development, evaluation, held-out, calibration), seeded stratified round robin with seed SEED+5, capped as listed; no response-dependent filtering"
+  },
+  "preregistration_sha256": "b8cfd3550c8bb36ff9bdcc097b3ef4839b4d871131719e0f67da707a57f5c53e",
+  "image_pad_id": 248056,
+  "k": 2,
+  "second_model": {
+    "id": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a"
+  },
+  "checkpoint_bytes": {
+    "P0": 19306310880
+  },
+  "plan": [
+    "G0:K0:fam",
+    "G0:K2:fam",
+    "GF1:K2:fam",
+    "GF1:K0:fam",
+    "GF4:K0:fam",
+    "GF4:K2:fam"
+  ],
+  "e4": {
+    "tokens": [
+      64,
+      144,
+      256,
+      576,
+      960
+    ],
+    "lengths": [
+      16,
+      64,
+      256,
+      1024
+    ],
+    "prompt": "Describe this image in detail, including all visible text.",
+    "profile": [
+      [
+        64,
+        256
+      ],
+      [
+        960,
+        256
+      ],
+      [
+        960,
+        16
+      ]
+    ]
+  }
+}
