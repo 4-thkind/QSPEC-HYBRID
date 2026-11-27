@@ -1,0 +1,26 @@
+{
+  "vqa": {
+    "url": "https://raw.githubusercontent.com/EvolvingLMMs-Lab/lmms-eval/9466a70af5086fc0b8ebcc785d8f105e65240fdc/lmms_eval/tasks/_task_utils/vqa_eval_metric.py",
+    "sha256": "895a501c7293f82916e36d4b1058dd17978dc81cbe122030f06c5f990ac0d487"
+  },
+  "textvqa": {
+    "url": "https://raw.githubusercontent.com/EvolvingLMMs-Lab/lmms-eval/9466a70af5086fc0b8ebcc785d8f105e65240fdc/lmms_eval/tasks/textvqa/utils.py",
+    "sha256": "dbcfb07f2ccb28c9c2bb21be24ce5ba3e6e32a3093dd0610f7c8dd0be7ea564c"
+  },
+  "chartqa": {
+    "url": "https://raw.githubusercontent.com/EvolvingLMMs-Lab/lmms-eval/9466a70af5086fc0b8ebcc785d8f105e65240fdc/lmms_eval/tasks/chartqa/utils.py",
+    "sha256": "0731abff133ee74b14012da628d9bdd4f2c909eda40d658cc5ff3bc541223bc1"
+  },
+  "mcq": {
+    "url": "https://raw.githubusercontent.com/EvolvingLMMs-Lab/lmms-eval/9466a70af5086fc0b8ebcc785d8f105e65240fdc/lmms_eval/tasks/_task_utils/mcq_extract.py",
+    "sha256": "74dcee6d85efb02c8ef25263473bc65f32946d4aea9b53b41cffda6141646296"
+  },
+  "mmstar": {
+    "url": "https://raw.githubusercontent.com/EvolvingLMMs-Lab/lmms-eval/9466a70af5086fc0b8ebcc785d8f105e65240fdc/lmms_eval/tasks/mmstar/utils.py",
+    "sha256": "0d0f1d76059d0188704086fd2ecc5bcb1169932bbca8a8840c7dea664c23a7f4"
+  },
+  "omni_metric": {
+    "url": "https://raw.githubusercontent.com/opendatalab/OmniDocBench/f133a71e9e91c3621c7ce8994200a7b394a06eb3/src/metrics/cal_metric.py",
+    "sha256": "5341041b10f681a472c36f10615f83b5ed5c2a25b454f0fb0cb7299f1786b0c9"
+  }
+}
