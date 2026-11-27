@@ -1,0 +1,568 @@
+Attached GPU: NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB, 595.71.05
+Downloading cpython-3.12.13-linux-x86_64-gnu (download) (32.6MiB)
+ Downloaded cpython-3.12.13-linux-x86_64-gnu (download)
+Using CPython 3.12.13
+Creating virtual environment at: .venv-hybrid
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+Initialized empty Git repository in /marimo/qspec_hybrid_project_241f15ff/tooling/modelopt/.git/
+From https://github.com/NVIDIA/Model-Optimizer
+ * branch            d7cbff3486a3ffb1a357e32d9810da0bfc649709 -> FETCH_HEAD
+HEAD is now at d7cbff3 Fix import modelopt.torch without the [hf] extra (#2671)
+Using Python 3.12.13 environment at: .venv-hybrid
+Resolved 243 packages in 1m 03s
+   Building nvidia-modelopt @ file:///marimo/qspec_hybrid_project_241f15ff/tooling/modelopt
+Downloading nvidia-nvshmem-cu13 (57.6MiB)
+Downloading nvidia-cudnn-frontend (9.7MiB)
+Downloading grpcio (7.0MiB)
+Downloading sympy (6.0MiB)
+Downloading nvidia-cuda-nvdisasm (4.9MiB)
+Downloading nvidia-cuda-cupti (10.2MiB)
+Downloading pillow (6.8MiB)
+Downloading fonttools (5.2MiB)
+Downloading nvidia-cusparse (139.2MiB)
+Downloading flashinfer-cubin (1.5GiB)
+Downloading mistral-common (6.3MiB)
+Downloading zstandard (5.3MiB)
+Downloading z3-solver (27.9MiB)
+Downloading nvidia-cublas (403.5MiB)
+Downloading nvidia-curand (56.8MiB)
+Downloading nvidia-cusparselt-cu13 (162.3MiB)
+Downloading cuda-core (6.3MiB)
+Downloading nvidia-cufft (204.2MiB)
+Downloading nvidia-cutlass-dsl-libs-cu13 (84.2MiB)
+Downloading llvmlite (53.7MiB)
+Downloading numpy (15.8MiB)
+Downloading cuda-bindings (8.0MiB)
+Downloading instanttensor (7.0MiB)
+Downloading torchcodec (9.5MiB)
+Downloading nvidia-cusolver (191.6MiB)
+Downloading matplotlib (9.4MiB)
+Downloading opencv-python-headless (58.4MiB)
+Downloading nvidia-nvvm (71.7MiB)
+Downloading transformers (11.7MiB)
+Downloading nvidia-cutlass-dsl-libs-cu12 (84.6MiB)
+Downloading pyarrow (52.5MiB)
+Downloading pycountry (7.7MiB)
+Downloading torchvision (7.3MiB)
+Downloading nccl-extensions (21.5MiB)
+Downloading pandas (11.5MiB)
+Downloading torch (502.2MiB)
+Downloading scipy (33.7MiB)
+Downloading tilelang (48.2MiB)
+Downloading tokenspeed-triton (90.5MiB)
+Downloading nvidia-nvjitlink (44.5MiB)
+Downloading nvidia-cuda-nvcc (44.8MiB)
+Downloading nvidia-cuda-nvrtc (86.0MiB)
+Downloading diffusers (6.1MiB)
+Downloading nvidia-cudnn-cu13 (349.2MiB)
+Downloading pynvvideocodec (41.2MiB)
+Downloading triton (188.6MiB)
+Downloading nvidia-nccl-cu13 (196.4MiB)
+Downloading pulp (15.6MiB)
+Downloading vllm (305.7MiB)
+Downloading flashinfer-python (32.1MiB)
+      Built nvidia-modelopt @ file:///marimo/qspec_hybrid_project_241f15ff/tooling/modelopt
+ Downloaded nvidia-cuda-nvdisasm
+Downloading cryptography (4.5MiB)
+ Downloaded fonttools
+ Downloaded zstandard
+Downloading uvloop (4.3MiB)
+Downloading mlflow-skinny (4.2MiB)
+ Downloaded sympy
+Downloading hf-xet (4.1MiB)
+ Downloaded diffusers
+Downloading nvidia-cuda-cccl (3.9MiB)
+ Downloaded mistral-common
+Downloading numba (3.6MiB)
+ Downloaded cuda-core
+Downloading nccl4py (3.5MiB)
+ Downloaded pillow
+Downloading oss-harmony (3.4MiB)
+ Downloaded grpcio
+Downloading tokenizers (3.2MiB)
+ Downloaded instanttensor
+Downloading rapidfuzz (3.0MiB)
+ Downloaded torchvision
+Downloading llguidance (2.9MiB)
+ Downloaded pycountry
+Downloading nvidia-cutlass-dsl-libs-base (2.7MiB)
+ Downloaded cuda-bindings
+Downloading fastsafetensors (2.6MiB)
+ Downloaded cryptography
+Downloading apache-tvm-ffi (2.6MiB)
+ Downloaded matplotlib
+ Downloaded mlflow-skinny
+ Downloaded nvidia-cudnn-frontend
+ Downloaded torchcodec
+Downloading anthropic (2.3MiB)
+Downloading openai (2.3MiB)
+ Downloaded uvloop
+Downloading outlines-core (2.2MiB)
+Downloading pydantic-core (2.2MiB)
+Downloading nvidia-cuda-runtime (2.1MiB)
+ Downloaded nccl4py
+Downloading networkx (2.0MiB)
+ Downloaded numba
+ Downloaded nvidia-cuda-cccl
+ Downloaded hf-xet
+Downloading aiohttp (1.8MiB)
+ Downloaded rapidfuzz
+Downloading torchaudio (1.7MiB)
+Downloading nltk (1.6MiB)
+Downloading sentencepiece (1.6MiB)
+ Downloaded tokenizers
+ Downloaded nvidia-cuda-cupti
+ Downloaded llguidance
+Downloading kiwisolver (1.4MiB)
+ Downloaded oss-harmony
+Downloading xgrammar (1.2MiB)
+ Downloaded flashinfer-python
+Downloading pygments (1.2MiB)
+Downloading nvidia-cutlass-dsl-libs-core (1.2MiB)
+Downloading nvidia-cufile (1.2MiB)
+ Downloaded nvidia-cutlass-dsl-libs-base
+Downloading tiktoken (1.1MiB)
+ Downloaded fastsafetensors
+Downloading databricks-sdk (1.1MiB)
+ Downloaded pandas
+ Downloaded transformers
+ Downloaded xgrammar
+Downloading setuptools (1.0MiB)
+ Downloaded pygments
+ Downloaded nvidia-cutlass-dsl-libs-core
+ Downloaded nvidia-cufile
+ Downloaded kiwisolver
+ Downloaded tiktoken
+ Downloaded torchaudio
+ Downloaded nltk
+ Downloaded nvidia-cuda-runtime
+ Downloaded sentencepiece
+ Downloaded outlines-core
+ Downloaded pydantic-core
+ Downloaded networkx
+ Downloaded aiohttp
+ Downloaded apache-tvm-ffi
+ Downloaded databricks-sdk
+ Downloaded setuptools
+ Downloaded openai
+   Building transformers-stream-generator==0.0.5
+ Downloaded anthropic
+      Built transformers-stream-generator==0.0.5
+ Downloaded pulp
+ Downloaded numpy
+ Downloaded nccl-extensions
+ Downloaded z3-solver
+ Downloaded scipy
+ Downloaded pynvvideocodec
+ Downloaded nvidia-nvjitlink
+ Downloaded nvidia-cuda-nvcc
+ Downloaded tilelang
+ Downloaded pyarrow
+ Downloaded llvmlite
+ Downloaded nvidia-nvshmem-cu13
+ Downloaded nvidia-curand
+ Downloaded opencv-python-headless
+ Downloaded nvidia-nvvm
+ Downloaded nvidia-cutlass-dsl-libs-cu13
+ Downloaded nvidia-cutlass-dsl-libs-cu12
+ Downloaded nvidia-cuda-nvrtc
+ Downloaded tokenspeed-triton
+ Downloaded flashinfer-cubin
+ Downloaded nvidia-cusparse
+ Downloaded nvidia-cusparselt-cu13
+ Downloaded triton
+ Downloaded nvidia-cusolver
+ Downloaded nvidia-nccl-cu13
+ Downloaded nvidia-cufft
+ Downloaded vllm
+ Downloaded nvidia-cudnn-cu13
+ Downloaded nvidia-cublas
+ Downloaded torch
+Prepared 242 packages in 2m 19s
+Installed 243 packages in 3.48s
+ + accelerate==1.15.0
+ + agent-detector==2.0.0
+ + aiohappyeyeballs==2.7.1
+ + aiohttp==3.14.5
+ + aiosignal==1.4.0
+ + annotated-doc==0.0.6
+ + annotated-types==0.8.0
+ + anthropic==2.8.0
+ + anyio==4.16.0
+ + apache-tvm-ffi==0.1.11
+ + astor==0.8.1
+ + attrs==26.1.0
+ + blake3==1.0.11
+ + cachetools==7.3.0
+ + cbor2==6.2.1
+ + certifi==2026.10.23
+ + cffi==2.1.1
+ + charset-normalizer==3.5.2
+ + click==8.5.1
+ + cloudpickle==3.1.2
+ + compressed-tensors==0.17.0
+ + contourpy==1.4.0
+ + cryptography==50.0.2
+ + cuda-bindings==13.5.0
+ + cuda-core==1.2.2
+ + cuda-pathfinder==1.8.6
+ + cuda-python==13.5.0
+ + cuda-tile==1.8.0
+ + cuda-toolkit==13.0.3.0
+ + cycler==0.12.1
+ + databricks-sdk==0.164.0
+ + datasets==5.2.0
+ + defusedxml==0.7.1
+ + depyf==0.20.0
+ + detect-installer==0.2.1
+ + diffusers==0.42.1
+ + dill==0.4.1
+ + dnspython==2.9.2
+ + docstring-parser==0.18.0
+ + einops==0.8.2
+ + email-validator==2.3.0
+ + fastapi==0.136.3
+ + fastapi-cli==0.0.32
+ + fastapi-cloud-cli==0.27.1
+ + fastar==0.12.0
+ + fastsafetensors==0.5.0
+ + filelock==4.2.10
+ + fire==0.7.1
+ + flashinfer-cubin==0.7.0.post1
+ + flashinfer-python==0.7.0.post1
+ + fonttools==4.68.0
+ + frozenlist==1.8.0
+ + fsspec==2026.9.0
+ + gitdb==4.0.12
+ + gitpython==3.2.1
+ + google-auth==2.62.2
+ + googleapis-common-protos==1.76.0
+ + grpcio==1.85.1
+ + h11==0.16.0
+ + hf-xet==1.8.0
+ + httpcore==1.0.9
+ + httpcore2==2.16.0
+ + httptools==0.9.0
+ + httpx==0.28.1
+ + httpx2==2.16.0
+ + huggingface-hub==1.33.0
+ + humming-kernels==0.1.16
+ + idna==3.20
+ + ijson==3.6.0
+ + importlib-metadata==10.2.0
+ + instanttensor==0.2.3
+ + interegular==0.3.3
+ + jinja2==3.1.6
+ + jiter==0.19.0
+ + jmespath==1.1.0
+ + joblib==1.6.0
+ + jsonschema==4.26.0
+ + jsonschema-specifications==2025.9.1
+ + kiwisolver==1.5.1
+ + lark==1.2.2
+ + lazy-importer==0.1.0
+ + levenshtein==0.27.5
+ + llguidance==1.7.6
+ + llvmlite==0.47.0
+ + lm-format-enforcer==0.11.3
+ + loguru==0.7.3
+ + markdown-it-py==4.3.0
+ + markupsafe==3.0.4
+ + matplotlib==3.11.2
+ + mcp==2.3.0
+ + mcp-types==2.3.0
+ + mdurl==0.1.2
+ + mistral-common==1.13.1
+ + ml-dtypes==0.6.0
+ + mlflow-skinny==3.18.0
+ + model-hosting-container-standards==0.1.16
+ + mpmath==1.3.0
+ + msgspec==0.22.0
+ + multidict==7.2.1
+ + multiprocess==0.70.19
+ + nccl-extensions==0.1.0
+ + nccl4py==0.6.0
+ + networkx==3.7
+ + ninja==1.13.2
+ + nltk==3.10.4
+ + numba==0.65.0
+ + numpy==2.3.5
+ + nvidia-cublas==13.1.1.3
+ + nvidia-cuda-cccl==13.3.5.0.6
+ + nvidia-cuda-crt==13.5.37
+ + nvidia-cuda-cupti==13.0.85
+ + nvidia-cuda-nvcc==13.5.37
+ + nvidia-cuda-nvdisasm==13.5.37
+ + nvidia-cuda-nvrtc==13.0.88
+ + nvidia-cuda-runtime==13.0.96
+ + nvidia-cudnn-cu13==9.20.0.48
+ + nvidia-cudnn-frontend==1.31.0
+ + nvidia-cufft==12.0.0.61
+ + nvidia-cufile==1.15.1.6
+ + nvidia-curand==10.4.0.35
+ + nvidia-cusolver==12.0.4.66
+ + nvidia-cusparse==12.6.3.3
+ + nvidia-cusparselt-cu13==0.8.1
+ + nvidia-cutlass-dsl==4.7.1
+ + nvidia-cutlass-dsl-libs-base==4.7.1
+ + nvidia-cutlass-dsl-libs-core==4.7.1
+ + nvidia-cutlass-dsl-libs-cu12==4.7.1
+ + nvidia-cutlass-dsl-libs-cu13==4.7.1
+ + nvidia-ml-py==13.615.71
+ + nvidia-modelopt==0.0.1.dev1+gd7cbff348 (from file:///marimo/qspec_hybrid_project_241f15ff/tooling/modelopt)
+ + nvidia-nccl-cu13==2.29.7
+ + nvidia-nvjitlink==13.5.37
+ + nvidia-nvshmem-cu13==3.4.5
+ + nvidia-nvtx==13.0.85
+ + nvidia-nvvm==13.5.37
+ + nvtx==0.2.15
+ + omegaconf==2.4.0
+ + openai==3.49.0
+ + opencv-python-headless==5.0.0.93
+ + opentelemetry-api==1.45.2
+ + opentelemetry-exporter-http-transport==0.66b2
+ + opentelemetry-exporter-otlp==1.45.2
+ + opentelemetry-exporter-otlp-common==0.66b2
+ + opentelemetry-exporter-otlp-proto-common==1.45.2
+ + opentelemetry-exporter-otlp-proto-grpc==1.45.2
+ + opentelemetry-exporter-otlp-proto-http==1.45.2
+ + opentelemetry-proto==1.45.2
+ + opentelemetry-sdk==1.45.2
+ + opentelemetry-semantic-conventions==0.66b2
+ + opentelemetry-semantic-conventions-ai==0.5.1
+ + oss-harmony==0.0.12
+ + outlines-core==0.2.14
+ + packaging==26.3
+ + pandas==3.1.1
+ + partial-json-parser==0.2.1.1.post7
+ + peft==0.21.2
+ + pillow==13.0.0
+ + prometheus-client==0.26.0
+ + prometheus-fastapi-instrumentator==8.1.0
+ + propcache==0.5.4
+ + protobuf==7.36.2
+ + psutil==7.2.2
+ + pulp==3.3.2
+ + py-cpuinfo==9.0.0
+ + pyarrow==26.0.1
+ + pyasn1==0.6.5
+ + pyasn1-modules==0.4.2
+ + pybase64==1.5.1
+ + pycountry==26.2.16
+ + pycparser==3.12
+ + pydantic==2.14.3
+ + pydantic-core==2.50.4
+ + pydantic-extra-types==2.11.1
+ + pydantic-settings==2.16.2
+ + pygments==2.21.0
+ + pyjwt==2.15.1
+ + pynvvideocodec==2.0.4
+ + pyparsing==3.3.3
+ + python-dateutil==4.0.0
+ + python-dotenv==1.2.4
+ + python-json-logger==4.2.0
+ + python-levenshtein==0.27.5
+ + python-multipart==0.0.33
+ + pyyaml==6.0.3
+ + pyzmq==27.3.0
+ + quack-kernels==0.6.5
+ + rapidfuzz==3.14.6
+ + referencing==0.37.0
+ + regex==2026.11.9
+ + requests==2.34.2
+ + rich==15.0.0
+ + rich-toolkit==0.20.6
+ + rignore==0.8.1
+ + rpds-py==2026.9.1
+ + safetensors==0.8.0
+ + scipy==1.18.1
+ + sentencepiece==0.2.3
+ + sentry-sdk==2.74.0
+ + setproctitle==1.3.8
+ + setuptools==80.10.2
+ + shellingham==1.5.4
+ + six==1.17.0
+ + smmap==5.0.3
+ + sniffio==1.3.1
+ + sqlparse==0.6.1
+ + sse-starlette==3.7.0
+ + starlette==1.10.0
+ + supervisor==4.3.0
+ + sympy==1.14.0
+ + tabulate==0.10.0
+ + termcolor==3.3.0
+ + tiktoken==0.14.0
+ + tilelang==0.1.12
+ + tokenizers==0.23.3
+ + tokenspeed-mla==0.1.8
+ + tokenspeed-triton==3.9.10.post20261028
+ + torch==2.13.0
+ + torch-c-dlpack-ext==0.1.5
+ + torchaudio==2.11.0
+ + torchcodec==0.17.0
+ + torchvision==0.28.0
+ + tqdm==4.70.1
+ + transformers==5.17.0
+ + transformers-stream-generator==0.0.5
+ + triton==3.7.1
+ + truststore==0.10.5
+ + typer==0.29.0
+ + typing-extensions==4.16.0
+ + typing-inspection==0.4.5
+ + tzdata==2026.6
+ + urllib3==2.8.0
+ + uvicorn==0.54.0
+ + uvloop==0.23.0
+ + vllm==0.31.0
+ + watchfiles==1.3.0
+ + websockets==17.4
+ + wonderwords==3.0.1
+ + xgrammar==0.2.7
+ + xxhash==4.1.0
+ + yarl==1.25.1
+ + z3-solver==4.15.4.0
+ + zipp==4.1.2
+ + zstandard==0.25.0
+Using CPython 3.12.13 interpreter at: .venv-hybrid/bin/python
+Resolved 5 packages in 391ms
+Downloading nvidia-cuda-runtime (2.1MiB)
+Downloading nvidia-cuda-nvcc (35.7MiB)
+Downloading nvidia-curand (56.8MiB)
+Downloading nvidia-nvvm (58.7MiB)
+ Downloaded nvidia-cuda-runtime
+ Downloaded nvidia-cuda-nvcc
+ Downloaded nvidia-curand
+ Downloaded nvidia-nvvm
+Prepared 5 packages in 1.62s
+Installed 5 packages in 11ms
+ + nvidia-cuda-crt==13.0.88
+ + nvidia-cuda-nvcc==13.0.88
+ + nvidia-cuda-runtime==13.0.96
+ + nvidia-curand==10.4.0.35
+ + nvidia-nvvm==13.0.88
+Using Python 3.12.13 environment at: .venv-hybrid
+Checked 243 packages in 15ms
+All installed packages are compatible
+Using Python 3.12.13 environment at: .venv-hybrid
+<unknown>:402: SyntaxWarning: invalid escape sequence '\['
+<unknown>:402: SyntaxWarning: invalid escape sequence '\]'
+<unknown>:404: SyntaxWarning: invalid escape sequence '\('
+<unknown>:404: SyntaxWarning: invalid escape sequence '\)'
+Preparing frozen textvqa samples
+Downloading data:   0%|          | 0/20 [00:00<?, ?files/s]Downloading data:   5%|▌         | 1/20 [00:02<00:42,  2.22s/files]Downloading data:  10%|█         | 2/20 [00:03<00:33,  1.87s/files]Downloading data:  15%|█▌        | 3/20 [00:05<00:30,  1.82s/files]Downloading data:  20%|██        | 4/20 [00:06<00:26,  1.65s/files]Downloading data:  25%|██▌       | 5/20 [00:07<00:23,  1.58s/files]Downloading data:  30%|███       | 6/20 [00:09<00:21,  1.56s/files]Downloading data:  35%|███▌      | 7/20 [00:10<00:20,  1.56s/files]Downloading data:  40%|████      | 8/20 [00:12<00:18,  1.56s/files]Downloading data:  45%|████▌     | 9/20 [00:14<00:18,  1.65s/files]Downloading data:  50%|█████     | 10/20 [00:17<00:17,  1.72s/files]Downloading data:  55%|█████▌    | 11/20 [00:19<00:16,  1.79s/files]Downloading data:  60%|██████    | 12/20 [00:20<00:13,  1.74s/files]Downloading data:  65%|██████▌   | 13/20 [00:23<00:12,  1.77s/files]Downloading data:  70%|███████   | 14/20 [00:24<00:10,  1.75s/files]Downloading data:  75%|███████▌  | 15/20 [00:27<00:09,  1.86s/files]Downloading data:  80%|████████  | 16/20 [00:29<00:07,  1.81s/files]Downloading data:  85%|████████▌ | 17/20 [00:32<00:05,  1.88s/files]Downloading data:  90%|█████████ | 18/20 [00:33<00:03,  1.85s/files]Downloading data:  95%|█████████▌| 19/20 [00:35<00:01,  1.86s/files]Downloading data: 100%|██████████| 20/20 [00:38<00:00,  1.92s/files]Downloading data: 100%|██████████| 20/20 [00:38<00:00,  1.92s/files]
+Generating train split:   0%|          | 0/34602 [00:00<?, ? examples/s]Generating train split:   0%|          | 100/34602 [00:00<01:08, 505.13 examples/s]Generating train split:   1%|          | 400/34602 [00:00<00:26, 1298.88 examples/s]Generating train split:   2%|▏         | 600/34602 [00:00<00:24, 1397.56 examples/s]Generating train split:   2%|▏         | 800/34602 [00:00<00:21, 1567.96 examples/s]Generating train split:   3%|▎         | 1200/34602 [00:00<00:17, 1893.24 examples/s]Generating train split:   5%|▍         | 1700/34602 [00:00<00:13, 2386.59 examples/s]Generating train split:   6%|▌         | 2031/34602 [00:01<00:14, 2252.05 examples/s]Generating train split:   7%|▋         | 2331/34602 [00:01<00:14, 2208.65 examples/s]Generating train split:   8%|▊         | 2631/34602 [00:01<00:15, 2104.20 examples/s]Generating train split:   8%|▊         | 2931/34602 [00:01<00:14, 2166.81 examples/s]Generating train split:  10%|▉         | 3331/34602 [00:01<00:13, 2302.98 examples/s]Generating train split:  10%|█         | 3562/34602 [00:01<00:13, 2289.07 examples/s]Generating train split:  11%|█▏        | 3962/34602 [00:01<00:11, 2581.83 examples/s]Generating train split:  13%|█▎        | 4362/34602 [00:02<00:26, 1129.65 examples/s]Generating train split:  13%|█▎        | 4562/34602 [00:02<00:29, 1002.52 examples/s]Generating train split:  14%|█▍        | 4762/34602 [00:03<00:27, 1086.44 examples/s]Generating train split:  15%|█▍        | 5062/34602 [00:03<00:22, 1302.14 examples/s]Generating train split:  16%|█▌        | 5492/34602 [00:03<00:17, 1635.26 examples/s]Generating train split:  17%|█▋        | 5992/34602 [00:03<00:13, 2159.35 examples/s]Generating train split:  18%|█▊        | 6292/34602 [00:03<00:13, 2172.62 examples/s]Generating train split:  19%|█▉        | 6592/34602 [00:03<00:14, 1899.95 examples/s]Generating train split:  20%|██        | 7022/34602 [00:04<00:14, 1858.06 examples/s]Generating train split:  21%|██▏       | 7422/34602 [00:04<00:12, 2130.17 examples/s]Generating train split:  23%|██▎       | 7822/34602 [00:04<00:11, 2302.41 examples/s]Generating train split:  24%|██▍       | 8222/34602 [00:04<00:12, 2189.32 examples/s]Generating train split:  25%|██▌       | 8752/34602 [00:04<00:13, 1911.66 examples/s]Generating train split:  26%|██▋       | 9152/34602 [00:05<00:13, 1899.93 examples/s]Generating train split:  28%|██▊       | 9552/34602 [00:05<00:11, 2162.39 examples/s]Generating train split:  29%|██▉       | 10052/34602 [00:05<00:09, 2562.00 examples/s]Generating train split:  30%|███       | 10482/34602 [00:05<00:12, 1993.13 examples/s]Generating train split:  31%|███       | 10782/34602 [00:05<00:14, 1654.65 examples/s]Generating train split:  32%|███▏      | 11182/34602 [00:06<00:12, 1923.06 examples/s]Generating train split:  33%|███▎      | 11482/34602 [00:07<00:29, 783.46 examples/s] Generating train split:  34%|███▍      | 11682/34602 [00:07<00:41, 550.00 examples/s]Generating train split:  35%|███▍      | 11982/34602 [00:08<00:36, 620.25 examples/s]Generating train split:  35%|███▌      | 12212/34602 [00:08<00:29, 748.10 examples/s]Generating train split:  37%|███▋      | 12712/34602 [00:08<00:19, 1151.85 examples/s]Generating train split:  38%|███▊      | 13212/34602 [00:08<00:13, 1588.98 examples/s]Generating train split:  40%|███▉      | 13712/34602 [00:08<00:10, 2028.98 examples/s]Generating train split:  41%|████      | 14142/34602 [00:08<00:09, 2253.42 examples/s]Generating train split:  42%|████▏     | 14542/34602 [00:09<00:08, 2470.20 examples/s]Generating train split:  43%|████▎     | 15042/34602 [00:09<00:07, 2649.10 examples/s]Generating train split:  45%|████▍     | 15542/34602 [00:09<00:07, 2527.81 examples/s]Generating train split:  46%|████▌     | 15872/34602 [00:09<00:08, 2281.27 examples/s]Generating train split:  47%|████▋     | 16372/34602 [00:09<00:06, 2617.08 examples/s]Generating train split:  49%|████▉     | 16872/34602 [00:09<00:06, 2798.80 examples/s]Generating train split:  50%|█████     | 17402/34602 [00:10<00:06, 2724.12 examples/s]Generating train split:  52%|█████▏    | 17902/34602 [00:10<00:05, 2965.06 examples/s]Generating train split:  53%|█████▎    | 18302/34602 [00:10<00:05, 2856.50 examples/s]Generating train split:  54%|█████▍    | 18702/34602 [00:10<00:06, 2533.50 examples/s]Generating train split:  55%|█████▌    | 19132/34602 [00:10<00:06, 2415.02 examples/s]Generating train split:  56%|█████▌    | 19432/34602 [00:10<00:07, 2132.93 examples/s]Generating train split:  57%|█████▋    | 19832/34602 [00:11<00:06, 2282.99 examples/s]Generating train split:  58%|█████▊    | 20232/34602 [00:11<00:06, 2166.46 examples/s]Generating train split:  59%|█████▉    | 20532/34602 [00:11<00:07, 1931.66 examples/s]Generating train split:  60%|██████    | 20862/34602 [00:11<00:07, 1953.94 examples/s]Generating train split:  61%|██████    | 21162/34602 [00:11<00:06, 2103.10 examples/s]Generating train split:  62%|██████▏   | 21562/34602 [00:11<00:05, 2401.47 examples/s]Generating train split:  63%|██████▎   | 21962/34602 [00:12<00:05, 2525.41 examples/s]Generating train split:  64%|██████▍   | 22262/34602 [00:12<00:05, 2301.84 examples/s]Generating train split:  65%|██████▌   | 22592/34602 [00:12<00:10, 1142.85 examples/s]Generating train split:  66%|██████▌   | 22792/34602 [00:13<00:18, 654.19 examples/s] Generating train split:  66%|██████▋   | 22992/34602 [00:14<00:22, 517.27 examples/s]Generating train split:  67%|██████▋   | 23292/34602 [00:14<00:16, 685.56 examples/s]Generating train split:  68%|██████▊   | 23592/34602 [00:14<00:12, 866.36 examples/s]Generating train split:  69%|██████▉   | 23892/34602 [00:14<00:10, 978.39 examples/s]Generating train split:  70%|██████▉   | 24092/34602 [00:15<00:10, 999.77 examples/s]Generating train split:  70%|███████   | 24322/34602 [00:15<00:09, 1114.28 examples/s]Generating train split:  71%|███████▏  | 24722/34602 [00:15<00:06, 1468.87 examples/s]Generating train split:  72%|███████▏  | 25022/34602 [00:15<00:07, 1341.29 examples/s]Generating train split:  73%|███████▎  | 25422/34602 [00:15<00:05, 1682.02 examples/s]Generating train split:  74%|███████▍  | 25722/34602 [00:16<00:08, 1091.85 examples/s]Generating train split:  75%|███████▌  | 26052/34602 [00:16<00:06, 1291.54 examples/s]Generating train split:  76%|███████▋  | 26452/34602 [00:16<00:05, 1612.01 examples/s]Generating train split:  78%|███████▊  | 26952/34602 [00:16<00:03, 2072.18 examples/s]Generating train split:  79%|███████▉  | 27252/34602 [00:17<00:07, 984.72 examples/s] Generating train split:  79%|███████▉  | 27452/34602 [00:18<00:11, 633.77 examples/s]Generating train split:  80%|███████▉  | 27652/34602 [00:18<00:12, 576.15 examples/s]Generating train split:  80%|████████  | 27782/34602 [00:18<00:11, 596.01 examples/s]Generating train split:  81%|████████  | 28082/34602 [00:19<00:08, 808.45 examples/s]Generating train split:  83%|████████▎ | 28582/34602 [00:19<00:04, 1257.00 examples/s]Generating train split:  84%|████████▍ | 28982/34602 [00:19<00:03, 1492.24 examples/s]Generating train split:  85%|████████▍ | 29282/34602 [00:19<00:03, 1681.88 examples/s]Generating train split:  86%|████████▌ | 29712/34602 [00:19<00:02, 1890.34 examples/s]Generating train split:  88%|████████▊ | 30412/34602 [00:19<00:01, 2644.69 examples/s]Generating train split:  89%|████████▉ | 30812/34602 [00:19<00:01, 2631.68 examples/s]Generating train split:  90%|█████████ | 31242/34602 [00:20<00:01, 2659.42 examples/s]Generating train split:  92%|█████████▏| 31842/34602 [00:20<00:00, 3072.95 examples/s]Generating train split:  93%|█████████▎| 32342/34602 [00:20<00:00, 3310.26 examples/s]Generating train split:  95%|█████████▍| 32742/34602 [00:20<00:00, 3369.65 examples/s]Generating train split:  96%|█████████▌| 33172/34602 [00:20<00:00, 2846.69 examples/s]Generating train split:  97%|█████████▋| 33572/34602 [00:21<00:00, 1304.32 examples/s]Generating train split:  98%|█████████▊| 33872/34602 [00:22<00:01, 688.94 examples/s] Generating train split:  98%|█████████▊| 34072/34602 [00:22<00:00, 669.44 examples/s]Generating train split:  99%|█████████▉| 34272/34602 [00:23<00:00, 756.51 examples/s]Generating train split: 100%|█████████▉| 34472/34602 [00:23<00:00, 876.84 examples/s]Generating train split: 100%|██████████| 34602/34602 [00:23<00:00, 1492.39 examples/s]
+Generating validation split:   0%|          | 0/5000 [00:00<?, ? examples/s]Generating validation split:   2%|▏         | 100/5000 [00:00<00:08, 545.74 examples/s]Generating validation split:  12%|█▏        | 600/5000 [00:00<00:02, 2143.66 examples/s]Generating validation split:  18%|█▊        | 900/5000 [00:00<00:01, 2148.66 examples/s]Generating validation split:  26%|██▌       | 1300/5000 [00:00<00:01, 2580.89 examples/s]Generating validation split:  35%|███▌      | 1767/5000 [00:00<00:01, 2849.89 examples/s]Generating validation split:  43%|████▎     | 2167/5000 [00:00<00:00, 2964.56 examples/s]Generating validation split:  53%|█████▎    | 2667/5000 [00:01<00:00, 2889.97 examples/s]Generating validation split:  61%|██████▏   | 3067/5000 [00:01<00:00, 2546.65 examples/s]Generating validation split:  69%|██████▊   | 3434/5000 [00:01<00:00, 2523.28 examples/s]Generating validation split:  77%|███████▋  | 3834/5000 [00:01<00:00, 2784.98 examples/s]Generating validation split:  87%|████████▋ | 4334/5000 [00:01<00:00, 2888.38 examples/s]Generating validation split:  93%|█████████▎| 4634/5000 [00:03<00:00, 700.99 examples/s] Generating validation split: 100%|██████████| 5000/5000 [00:03<00:00, 698.47 examples/s]Generating validation split: 100%|██████████| 5000/5000 [00:03<00:00, 1363.10 examples/s]
+Generating test split:   0%|          | 0/5734 [00:00<?, ? examples/s]Generating test split:   2%|▏         | 100/5734 [00:00<00:07, 716.06 examples/s]Generating test split:   7%|▋         | 400/5734 [00:00<00:03, 1486.72 examples/s]Generating test split:  12%|█▏        | 700/5734 [00:00<00:02, 1772.59 examples/s]Generating test split:  21%|██        | 1200/5734 [00:00<00:01, 2362.76 examples/s]Generating test split:  27%|██▋       | 1534/5734 [00:00<00:01, 2534.28 examples/s]Generating test split:  35%|███▌      | 2034/5734 [00:00<00:01, 2983.95 examples/s]Generating test split:  46%|████▌     | 2634/5734 [00:00<00:00, 3309.39 examples/s]Generating test split:  52%|█████▏    | 2968/5734 [00:01<00:00, 2778.84 examples/s]Generating test split:  59%|█████▊    | 3368/5734 [00:01<00:00, 2507.53 examples/s]Generating test split:  66%|██████▌   | 3768/5734 [00:01<00:00, 2570.05 examples/s]Generating test split:  77%|███████▋  | 4401/5734 [00:01<00:00, 2745.99 examples/s]Generating test split:  85%|████████▌ | 4901/5734 [00:01<00:00, 3011.85 examples/s]Generating test split:  94%|█████████▍| 5401/5734 [00:01<00:00, 3318.03 examples/s]Generating test split: 100%|██████████| 5734/5734 [00:02<00:00, 2841.52 examples/s]
+Preparing frozen chartqa samples
+Generating test split:   0%|          | 0/2500 [00:00<?, ? examples/s]Generating test split:  28%|██▊       | 700/2500 [00:00<00:00, 5290.00 examples/s]Generating test split: 100%|██████████| 2500/2500 [00:00<00:00, 11062.36 examples/s]
+Preparing frozen mmstar samples
+Generating val split:   0%|          | 0/1500 [00:00<?, ? examples/s]Generating val split:  47%|████▋     | 700/1500 [00:00<00:00, 6517.59 examples/s]Generating val split: 100%|██████████| 1500/1500 [00:00<00:00, 9893.91 examples/s]
+Preparing frozen omnidoc_ocr samples
+Generating train split:   0%|          | 0/12726 [00:00<?, ? examples/s]Generating train split:   8%|▊         | 1000/12726 [00:00<00:02, 5100.26 examples/s]Generating train split:  24%|██▎       | 3000/12726 [00:00<00:01, 6587.98 examples/s]Generating train split:  47%|████▋     | 6000/12726 [00:00<00:00, 11021.03 examples/s]Generating train split:  71%|███████   | 9000/12726 [00:00<00:00, 14166.42 examples/s]Generating train split:  86%|████████▋ | 11000/12726 [00:00<00:00, 14329.63 examples/s]Generating train split: 100%|██████████| 12726/12726 [00:00<00:00, 13616.93 examples/s]
+Generating validation split:   0%|          | 0/4241 [00:00<?, ? examples/s]Generating validation split:  24%|██▎       | 1000/4241 [00:00<00:00, 9247.90 examples/s]Generating validation split:  47%|████▋     | 2000/4241 [00:00<00:00, 7782.54 examples/s]Generating validation split: 100%|██████████| 4241/4241 [00:00<00:00, 12855.41 examples/s]
+Generating test split:   0%|          | 0/4241 [00:00<?, ? examples/s]Generating test split:  24%|██▎       | 1000/4241 [00:00<00:00, 9821.28 examples/s]Generating test split: 100%|██████████| 4241/4241 [00:00<00:00, 23365.23 examples/s]
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files:  31%|███       | 4/13 [00:00<00:00, 35.40it/s]Fetching 13 files:  62%|██████▏   | 8/13 [00:00<00:00, 32.80it/s]Fetching 13 files:  69%|██████▉   | 9/13 [00:10<00:00, 32.80it/s]Fetching 13 files:  77%|███████▋  | 10/13 [00:32<00:14,  4.80s/it]Fetching 13 files:  85%|████████▍ | 11/13 [00:38<00:10,  5.02s/it]Fetching 13 files: 100%|██████████| 13/13 [00:48<00:00,  5.00s/it]Fetching 13 files: 100%|██████████| 13/13 [00:48<00:00,  3.73s/it]
+downloading google/gemma-4-12B-it
+Fetching 7 files:   0%|          | 0/7 [00:00<?, ?it/s]Fetching 7 files:  86%|████████▌ | 6/7 [00:00<00:00, 14.12it/s]Fetching 7 files:  86%|████████▌ | 6/7 [00:14<00:00, 14.12it/s]Fetching 7 files: 100%|██████████| 7/7 [00:55<00:00, 10.59s/it]Fetching 7 files: 100%|██████████| 7/7 [00:55<00:00,  7.89s/it]
+downloading google/gemma-4-12B-it-assistant
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files:  80%|████████  | 4/5 [00:00<00:00,  8.45it/s]Fetching 5 files: 100%|██████████| 5/5 [00:01<00:00,  2.14it/s]Fetching 5 files: 100%|██████████| 5/5 [00:01<00:00,  2.60it/s]
+
+=== G0 K=0: ['fam']
+  gate G0 K=0: pass | textvqa 0.61 cap 0% | chartqa 0.50 cap 12% | mmstar 0.62 cap 25% | omnidoc_ocr 0.10 cap 0%
+  sample textvqa: '1817'
+  sample chartqa: '6.88'
+  sample mmstar: 'A'
+  sample omnidoc_ocr: "To bound $\\max_{j \\in [J]} \\left\\| \\mathbf{U}^{(j)} \\mathbf{U}^{(j)\\top} - \\mathbf{U} \\mathbf{U}^\\top \\right\\|_F$ in the RHS above, we apply Wedin's theorem with (S.31) and obtain"
+  done G0:K0:fam in 33.1 min
+
+=== G0 K=2: ['fam']
+  gate G0 K=2: pass | textvqa 0.61 cap 0% | chartqa 0.50 cap 12% | mmstar 0.62 cap 25% | omnidoc_ocr 0.11 cap 0%
+  done G0:K2:fam in 16.3 min
+Exporting GF1; this takes a while
+ModelOpt save/restore enabled for `transformers` library.
+ModelOpt save/restore enabled for `diffusers` library.
+ModelOpt save/restore enabled for `peft` library.
+Failed to get GPU memory info: Uninitialized. Stopping GPU memory monitor.
+Initializing model from /home/marimo/.cache/huggingface/hub/models--google--gemma-4-12B-it/snapshots/43c9d014b231474fa7212dbb48a762566c2b255d
+Loading weights:   0%|          | 0/677 [00:00<?, ?it/s]Loading weights:   0%|          | 3/677 [00:00<01:19,  8.50it/s]Loading weights:   3%|▎         | 20/677 [00:00<00:12, 52.17it/s]Loading weights:   5%|▌         | 35/677 [00:00<00:08, 76.45it/s]Loading weights:   7%|▋         | 49/677 [00:00<00:06, 93.66it/s]Loading weights:   9%|▉         | 64/677 [00:00<00:05, 103.39it/s]Loading weights:  12%|█▏        | 84/677 [00:00<00:04, 127.07it/s]Loading weights:  15%|█▌        | 103/677 [00:01<00:04, 134.88it/s]Loading weights:  18%|█▊        | 119/677 [00:01<00:03, 141.51it/s]Loading weights:  21%|██        | 142/677 [00:01<00:03, 165.02it/s]Loading weights:  24%|██▎       | 160/677 [00:01<00:03, 149.75it/s]Loading weights:  26%|██▌       | 176/677 [00:01<00:03, 138.12it/s]Loading weights:  29%|██▊       | 193/677 [00:01<00:03, 146.00it/s]Loading weights:  31%|███       | 209/677 [00:01<00:03, 148.17it/s]Loading weights:  34%|███▎      | 228/677 [00:01<00:02, 150.08it/s]Loading weights:  36%|███▌      | 244/677 [00:01<00:03, 140.62it/s]Loading weights:  38%|███▊      | 259/677 [00:02<00:02, 141.79it/s]Loading weights:  40%|████      | 274/677 [00:02<00:02, 143.75it/s]Loading weights:  43%|████▎     | 289/677 [00:02<00:02, 141.34it/s]Loading weights:  45%|████▍     | 304/677 [00:02<00:02, 142.00it/s]Loading weights:  47%|████▋     | 319/677 [00:02<00:02, 142.05it/s]Loading weights:  49%|████▉     | 334/677 [00:02<00:02, 141.75it/s]Loading weights:  52%|█████▏    | 349/677 [00:02<00:02, 141.42it/s]Loading weights:  54%|█████▍    | 366/677 [00:02<00:02, 142.59it/s]Loading weights:  56%|█████▋    | 381/677 [00:02<00:02, 134.57it/s]Loading weights:  58%|█████▊    | 395/677 [00:03<00:02, 132.42it/s]Loading weights:  60%|██████    | 409/677 [00:03<00:02, 131.72it/s]Loading weights:  62%|██████▏   | 423/677 [00:03<00:02, 120.08it/s]Loading weights:  65%|██████▍   | 437/677 [00:03<00:01, 124.99it/s]Loading weights:  68%|██████▊   | 457/677 [00:03<00:01, 144.93it/s]Loading weights:  70%|██████▉   | 473/677 [00:03<00:01, 148.90it/s]Loading weights:  72%|███████▏  | 489/677 [00:03<00:01, 149.76it/s]Loading weights:  75%|███████▍  | 505/677 [00:03<00:01, 119.89it/s]Loading weights:  77%|███████▋  | 520/677 [00:04<00:01, 122.04it/s]Loading weights:  79%|███████▉  | 534/677 [00:04<00:01, 123.58it/s]Loading weights:  81%|████████  | 547/677 [00:04<00:01, 124.60it/s]Loading weights:  83%|████████▎ | 562/677 [00:04<00:00, 131.03it/s]Loading weights:  85%|████████▌ | 576/677 [00:04<00:00, 131.00it/s]Loading weights:  87%|████████▋ | 590/677 [00:04<00:00, 125.77it/s]Loading weights:  89%|████████▉ | 603/677 [00:04<00:00, 121.11it/s]Loading weights:  91%|█████████ | 617/677 [00:04<00:00, 121.79it/s]Loading weights:  93%|█████████▎| 631/677 [00:04<00:00, 122.81it/s]Loading weights:  95%|█████████▌| 645/677 [00:05<00:00, 122.77it/s]Loading weights:  97%|█████████▋| 659/677 [00:05<00:00, 124.82it/s]Loading weights: 100%|██████████| 677/677 [00:05<00:00, 129.90it/s]
+Use recipe /marimo/qspec_hybrid_project_241f15ff/configs/GF1.yaml for quantization
+[load_recipe] loading: /marimo/qspec_hybrid_project_241f15ff/configs/GF1.yaml
+Use calib batch_size 1
+Registered <class 'transformers.models.gemma4_unified.modeling_gemma4_unified.Gemma4UnifiedTextAttention'> to _QuantAttention for KV Cache quantization
+Inserted 1194 quantizers
+[1mQuant summary saved to /marimo/qspec_hybrid_project_241f15ff/models/GF1-export-48q2b83a/weights/.quant_summary.txt[0m
+Saving original model config to /marimo/qspec_hybrid_project_241f15ff/models/GF1-export-48q2b83a/weights
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+/marimo/qspec_hybrid_project_241f15ff/.venv-hybrid/lib/python3.12/site-packages/modelopt/torch/export/unified_export_hf.py:692: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  weight_scaling_factor = torch.tensor(weight_quantizer.amax / weight_quantizer.maxbound)
+Tied weight (declared): dropping 1 alias key(s) for 'lm_head.weight'; canonical kept.
+Writing model shards:   0%|          | 0/2 [00:00<?, ?it/s]Writing model shards:  50%|█████     | 1/2 [00:14<00:14, 14.67s/it]Writing model shards: 100%|██████████| 2/2 [00:22<00:00, 10.41s/it]Writing model shards: 100%|██████████| 2/2 [00:22<00:00, 11.05s/it]
+/marimo/qspec_hybrid_project_241f15ff/.venv-hybrid/lib/python3.12/site-packages/modelopt/torch/utils/plugins/hf_checkpoint_utils.py:950: UserWarning: Skipping tokenizer.json: checkpoint source is outside the checkpoint directory: /home/marimo/.cache/huggingface/hub/models--google--gemma-4-12B-it/snapshots/43c9d014b231474fa7212dbb48a762566c2b255d/tokenizer.json
+  warnings.warn(f"Skipping {rel}: {error}")
+Copied 3 source checkpoint file(s) to /marimo/qspec_hybrid_project_241f15ff/models/GF1-export-48q2b83a/weights: ['chat_template.jinja', 'processor_config.json', 'tokenizer_config.json']
+Quantized model exported to: /marimo/qspec_hybrid_project_241f15ff/models/GF1-export-48q2b83a/weights. Total time used 22.938480377197266s
+
+=== GF1 K=2: ['fam']
+  gate GF1 K=2: FAIL | textvqa 0.00 vs BF16 0.61 cap 25% FAIL | chartqa 0.00 vs BF16 0.50 cap 100% FAIL | mmstar 0.00 vs BF16 0.62 cap 25% FAIL | omnidoc_ocr 1.00 vs BF16 0.10 cap 0% FAIL
+Traceback (most recent call last):
+  File "/marimo/qspec_hybrid_project_241f15ff/qspec_hybrid/extensions.py", line 627, in run
+    ((lambda s: self.e3(s, quality=True)) if job == "e3q" else getattr(self, job))(server)
+  File "/marimo/qspec_hybrid_project_241f15ff/qspec_hybrid/extensions2.py", line 339, in fam
+    raise GateFailed(line)
+GateFailed: gate GF1 K=2: FAIL | textvqa 0.00 vs BF16 0.61 cap 25% FAIL | chartqa 0.00 vs BF16 0.50 cap 100% FAIL | mmstar 0.00 vs BF16 0.62 cap 25% FAIL | omnidoc_ocr 1.00 vs BF16 0.10 cap 0% FAIL
+Traceback (most recent call last):
+  File "/marimo/qspec_hybrid_project_241f15ff/qspec_hybrid/extensions.py", line 613, in run
+    model = self.model_for(policy)
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "/marimo/qspec_hybrid_project_241f15ff/qspec_hybrid/extensions2.py", line 260, in model_for
+    raise GateFailed(f"skipped by the quality gate: {broken.get(family) or broken.get(policy)}")
+GateFailed: skipped by the quality gate: gate GF1 K=2: FAIL | textvqa 0.00 vs BF16 0.61 cap 25% FAIL | chartqa 0.00 vs BF16 0.50 cap 100% FAIL | mmstar 0.00 vs BF16 0.62 cap 25% FAIL | omnidoc_ocr 1.00 vs BF16 0.10 cap 0% FAIL
+Exporting GF4; this takes a while
+ModelOpt save/restore enabled for `transformers` library.
+ModelOpt save/restore enabled for `diffusers` library.
+ModelOpt save/restore enabled for `peft` library.
+Failed to get GPU memory info: Uninitialized. Stopping GPU memory monitor.
+Initializing model from /home/marimo/.cache/huggingface/hub/models--google--gemma-4-12B-it/snapshots/43c9d014b231474fa7212dbb48a762566c2b255d
+Loading weights:   0%|          | 0/677 [00:00<?, ?it/s]Loading weights:   0%|          | 3/677 [00:00<01:29,  7.57it/s]Loading weights:   3%|▎         | 18/677 [00:00<00:14, 45.20it/s]Loading weights:   5%|▍         | 31/677 [00:00<00:09, 68.27it/s]Loading weights:   7%|▋         | 48/677 [00:00<00:06, 92.59it/s]Loading weights:   9%|▉         | 63/677 [00:00<00:05, 105.64it/s]Loading weights:  12%|█▏        | 78/677 [00:00<00:05, 114.10it/s]Loading weights:  14%|█▎        | 92/677 [00:01<00:04, 121.21it/s]Loading weights:  16%|█▋        | 111/677 [00:01<00:04, 139.26it/s]Loading weights:  19%|█▉        | 127/677 [00:01<00:03, 143.71it/s]Loading weights:  21%|██        | 143/677 [00:01<00:03, 148.12it/s]Loading weights:  23%|██▎       | 159/677 [00:01<00:03, 142.31it/s]Loading weights:  26%|██▌       | 174/677 [00:01<00:03, 125.99it/s]Loading weights:  28%|██▊       | 192/677 [00:01<00:03, 138.11it/s]Loading weights:  31%|███       | 208/677 [00:01<00:03, 141.16it/s]Loading weights:  33%|███▎      | 225/677 [00:01<00:03, 148.36it/s]Loading weights:  36%|███▌      | 241/677 [00:02<00:02, 149.59it/s]Loading weights:  38%|███▊      | 257/677 [00:02<00:03, 122.30it/s]Loading weights:  41%|████      | 275/677 [00:02<00:02, 135.35it/s]Loading weights:  43%|████▎     | 292/677 [00:02<00:02, 144.19it/s]Loading weights:  45%|████▌     | 308/677 [00:02<00:02, 144.66it/s]Loading weights:  48%|████▊     | 324/677 [00:02<00:02, 147.48it/s]Loading weights:  50%|█████     | 340/677 [00:02<00:02, 122.22it/s]Loading weights:  52%|█████▏    | 354/677 [00:02<00:02, 125.45it/s]Loading weights:  54%|█████▍    | 368/677 [00:03<00:02, 128.13it/s]Loading weights:  56%|█████▋    | 382/677 [00:03<00:02, 131.11it/s]Loading weights:  59%|█████▉    | 401/677 [00:03<00:01, 146.11it/s]Loading weights:  62%|██████▏   | 417/677 [00:03<00:01, 147.48it/s]Loading weights:  64%|██████▍   | 433/677 [00:03<00:01, 143.31it/s]Loading weights:  66%|██████▌   | 448/677 [00:03<00:01, 144.84it/s]Loading weights:  68%|██████▊   | 463/677 [00:03<00:01, 132.80it/s]Loading weights:  70%|███████   | 477/677 [00:03<00:01, 133.98it/s]Loading weights:  73%|███████▎  | 492/677 [00:03<00:01, 129.34it/s]Loading weights:  75%|███████▍  | 506/677 [00:04<00:01, 122.49it/s]Loading weights:  78%|███████▊  | 525/677 [00:04<00:01, 136.92it/s]Loading weights:  80%|███████▉  | 539/677 [00:04<00:01, 137.16it/s]Loading weights:  82%|████████▏ | 556/677 [00:04<00:00, 144.55it/s]Loading weights:  84%|████████▍ | 571/677 [00:04<00:00, 140.27it/s]Loading weights:  87%|████████▋ | 586/677 [00:04<00:00, 128.37it/s]Loading weights:  89%|████████▉ | 601/677 [00:04<00:00, 124.46it/s]Loading weights:  91%|█████████ | 616/677 [00:04<00:00, 130.68it/s]Loading weights:  93%|█████████▎| 630/677 [00:04<00:00, 130.60it/s]Loading weights:  95%|█████████▌| 644/677 [00:05<00:00, 124.16it/s]Loading weights:  97%|█████████▋| 659/677 [00:05<00:00, 129.34it/s]Loading weights: 100%|██████████| 677/677 [00:05<00:00, 128.93it/s]
+Use recipe /marimo/qspec_hybrid_project_241f15ff/configs/GF4.yaml for quantization
+[load_recipe] loading: /marimo/qspec_hybrid_project_241f15ff/configs/GF4.yaml
+Use calib batch_size 1
+Registered <class 'transformers.models.gemma4_unified.modeling_gemma4_unified.Gemma4UnifiedTextAttention'> to _QuantAttention for KV Cache quantization
+Inserted 1194 quantizers
+[1mQuant summary saved to /marimo/qspec_hybrid_project_241f15ff/models/GF4-export-c2qiq3zw/weights/.quant_summary.txt[0m
+Saving original model config to /marimo/qspec_hybrid_project_241f15ff/models/GF4-export-c2qiq3zw/weights
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+/marimo/qspec_hybrid_project_241f15ff/.venv-hybrid/lib/python3.12/site-packages/modelopt/torch/export/unified_export_hf.py:692: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  weight_scaling_factor = torch.tensor(weight_quantizer.amax / weight_quantizer.maxbound)
+Tied weight (declared): dropping 1 alias key(s) for 'lm_head.weight'; canonical kept.
+Writing model shards:   0%|          | 0/2 [00:00<?, ?it/s]Writing model shards:  50%|█████     | 1/2 [00:11<00:11, 11.54s/it]Writing model shards: 100%|██████████| 2/2 [00:17<00:00,  7.97s/it]Writing model shards: 100%|██████████| 2/2 [00:17<00:00,  8.51s/it]
+/marimo/qspec_hybrid_project_241f15ff/.venv-hybrid/lib/python3.12/site-packages/modelopt/torch/utils/plugins/hf_checkpoint_utils.py:950: UserWarning: Skipping tokenizer.json: checkpoint source is outside the checkpoint directory: /home/marimo/.cache/huggingface/hub/models--google--gemma-4-12B-it/snapshots/43c9d014b231474fa7212dbb48a762566c2b255d/tokenizer.json
+  warnings.warn(f"Skipping {rel}: {error}")
+Copied 3 source checkpoint file(s) to /marimo/qspec_hybrid_project_241f15ff/models/GF4-export-c2qiq3zw/weights: ['chat_template.jinja', 'processor_config.json', 'tokenizer_config.json']
+Quantized model exported to: /marimo/qspec_hybrid_project_241f15ff/models/GF4-export-c2qiq3zw/weights. Total time used 17.845877647399902s
+
+=== GF4 K=0: ['fam']
+  gate GF4 K=0: FAIL | textvqa 0.00 vs BF16 0.61 cap 25% FAIL | chartqa 0.00 vs BF16 0.50 cap 100% FAIL | mmstar 0.00 vs BF16 0.62 cap 62% FAIL | omnidoc_ocr 1.00 vs BF16 0.10 cap 12% FAIL
+Traceback (most recent call last):
+  File "/marimo/qspec_hybrid_project_241f15ff/qspec_hybrid/extensions.py", line 627, in run
+    ((lambda s: self.e3(s, quality=True)) if job == "e3q" else getattr(self, job))(server)
+  File "/marimo/qspec_hybrid_project_241f15ff/qspec_hybrid/extensions2.py", line 339, in fam
+    raise GateFailed(line)
+GateFailed: gate GF4 K=0: FAIL | textvqa 0.00 vs BF16 0.61 cap 25% FAIL | chartqa 0.00 vs BF16 0.50 cap 100% FAIL | mmstar 0.00 vs BF16 0.62 cap 62% FAIL | omnidoc_ocr 1.00 vs BF16 0.10 cap 12% FAIL
+Traceback (most recent call last):
+  File "/marimo/qspec_hybrid_project_241f15ff/qspec_hybrid/extensions.py", line 613, in run
+    model = self.model_for(policy)
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "/marimo/qspec_hybrid_project_241f15ff/qspec_hybrid/extensions2.py", line 260, in model_for
+    raise GateFailed(f"skipped by the quality gate: {broken.get(family) or broken.get(policy)}")
+GateFailed: skipped by the quality gate: gate GF4 K=0: FAIL | textvqa 0.00 vs BF16 0.61 cap 25% FAIL | chartqa 0.00 vs BF16 0.50 cap 100% FAIL | mmstar 0.00 vs BF16 0.62 cap 62% FAIL | omnidoc_ocr 1.00 vs BF16 0.10 cap 12% FAIL
+Recovery bundle: /marimo/qspec_hybrid_project_241f15ff/artifacts/qspec_hybrid_results.zip
