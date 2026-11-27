@@ -1,0 +1,5704 @@
+[
+  {
+    "pid": 12998,
+    "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "kv_cache_dtype": "torch.bfloat16",
+    "capability": [
+      12,
+      0
+    ],
+    "modules": [
+      {
+        "scope": "target",
+        "name": "vision_embedder.patch_dense",
+        "group": "protected",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              6912
+            ]
+          },
+          "bias": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "embed_vision.embedding_projection",
+        "group": "protected",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "embed_audio.embedding_projection",
+        "group": "protected",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              640
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.embed_tokens",
+        "group": "protected",
+        "method": "UnquantizedEmbeddingMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              262144,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.0.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.0.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.0.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.0.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.0.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.1.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.1.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.1.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.1.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.1.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.2.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.2.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.2.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.2.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.2.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.3.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.3.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.3.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.3.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.3.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.4.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.4.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.4.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.4.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.4.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.5.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              9216,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.5.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              8192
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.5.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.5.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.5.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.6.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.6.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.6.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.6.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.6.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.7.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.7.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.7.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.7.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.7.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.8.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.8.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.8.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.8.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.8.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.9.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.9.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.9.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.9.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.9.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.10.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.10.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.10.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.10.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.10.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.11.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              9216,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.11.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              8192
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.11.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.11.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.11.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.12.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.12.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.12.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.12.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.12.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.13.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.13.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.13.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.13.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.13.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.14.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.14.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.14.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.14.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.14.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.15.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.15.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.15.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.15.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.15.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.16.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.16.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.16.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.16.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.16.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.17.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              9216,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.17.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              8192
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.17.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.17.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.17.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.18.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.18.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.18.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.18.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.18.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.19.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.19.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.19.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.19.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.19.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.20.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.20.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.20.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.20.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.20.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.21.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.21.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.21.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.21.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.21.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.22.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.22.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.22.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.22.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.22.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.23.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              9216,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.23.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              8192
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.23.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.23.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.23.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.24.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.24.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.24.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.24.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.24.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.25.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.25.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.25.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.25.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.25.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.26.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.26.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.26.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.26.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.26.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.27.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.27.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.27.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.27.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.27.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.28.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.28.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.28.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.28.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.28.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.29.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              9216,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.29.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              8192
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.29.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.29.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.29.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.30.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.30.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.30.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.30.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.30.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.31.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.31.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.31.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.31.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.31.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.32.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.32.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.32.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.32.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.32.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.33.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.33.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.33.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.33.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.33.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.34.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.34.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.34.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.34.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.34.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.35.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              9216,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.35.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              8192
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.35.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.35.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.35.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.36.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.36.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.36.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.36.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.36.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.37.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.37.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.37.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.37.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.37.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.38.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.38.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.38.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.38.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.38.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.39.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.39.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.39.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.39.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.39.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.40.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.40.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.40.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.40.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.40.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.41.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              9216,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.41.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              8192
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.41.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.41.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.41.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.42.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.42.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.42.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.42.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.42.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.43.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.43.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.43.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.43.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.43.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.44.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.44.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.44.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.44.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.44.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.45.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.45.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.45.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.45.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.45.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.46.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.46.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.46.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.46.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.46.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.47.self_attn.qkv_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              9216,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.47.self_attn.o_proj",
+        "group": "A",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              8192
+            ]
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.47.self_attn.attn",
+        "group": "protected",
+        "method": "ModelOptKVCacheMethod",
+        "quantized": false,
+        "kv_cache_adapter": true,
+        "module_cache_dtype": "auto",
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {}
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.47.mlp.gate_up_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              3840,
+              30720
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.model.layers.47.mlp.down_proj",
+        "group": "D",
+        "method": "ModelOptLinearMethod",
+        "quantized": true,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "FlashInferFP8ScaledMMLinearKernel",
+        "quant_spec": "fp8_per_tensor_static",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.float8_e4m3fn",
+            "shape": [
+              15360,
+              3840
+            ]
+          },
+          "weight_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          },
+          "input_scale": {
+            "dtype": "torch.float32",
+            "shape": []
+          }
+        }
+      },
+      {
+        "scope": "target",
+        "name": "language_model.lm_head",
+        "group": "protected",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              262144,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "mtp",
+        "name": "model.pre_projection",
+        "group": "protected",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              1024,
+              7680
+            ]
+          }
+        }
+      },
+      {
+        "scope": "mtp",
+        "name": "model.post_projection",
+        "group": "protected",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              3840,
+              1024
+            ]
+          }
+        }
+      },
+      {
+        "scope": "mtp",
+        "name": "model.layers.0.self_attn.q_proj",
+        "group": "protected",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              4096,
+              1024
+            ]
+          }
+        }
+      },
+      {
+        "scope": "mtp",
+        "name": "model.layers.0.self_attn.o_proj",
+        "group": "protected",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              1024,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "mtp",
+        "name": "model.layers.0.mlp.gate_up_proj",
+        "group": "protected",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              16384,
+              1024
+            ]
+          }
+        }
+      },
+      {
+        "scope": "mtp",
+        "name": "model.layers.0.mlp.down_proj",
+        "group": "protected",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              1024,
+              8192
+            ]
+          }
+        }
+      },
+      {
+        "scope": "mtp",
+        "name": "model.layers.1.self_attn.q_proj",
+        "group": "protected",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              4096,
+              1024
+            ]
+          }
+        }
+      },
+      {
+        "scope": "mtp",
+        "name": "model.layers.1.self_attn.o_proj",
+        "group": "protected",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              1024,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "mtp",
+        "name": "model.layers.1.mlp.gate_up_proj",
+        "group": "protected",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              16384,
+              1024
+            ]
+          }
+        }
+      },
+      {
+        "scope": "mtp",
+        "name": "model.layers.1.mlp.down_proj",
+        "group": "protected",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              1024,
+              8192
+            ]
+          }
+        }
+      },
+      {
+        "scope": "mtp",
+        "name": "model.layers.2.self_attn.q_proj",
+        "group": "protected",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              4096,
+              1024
+            ]
+          }
+        }
+      },
+      {
+        "scope": "mtp",
+        "name": "model.layers.2.self_attn.o_proj",
+        "group": "protected",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              1024,
+              4096
+            ]
+          }
+        }
+      },
+      {
+        "scope": "mtp",
+        "name": "model.layers.2.mlp.gate_up_proj",
+        "group": "protected",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              16384,
+              1024
+            ]
+          }
+        }
+      },
+      {
+        "scope": "mtp",
+        "name": "model.layers.2.mlp.down_proj",
+        "group": "protected",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              1024,
+              8192
+            ]
+          }
+        }
+      },
+      {
+        "scope": "mtp",
+        "name": "model.layers.3.self_attn.q_proj",
+        "group": "protected",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              8192,
+              1024
+            ]
+          }
+        }
+      },
+      {
+        "scope": "mtp",
+        "name": "model.layers.3.self_attn.o_proj",
+        "group": "protected",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              1024,
+              8192
+            ]
+          }
+        }
+      },
+      {
+        "scope": "mtp",
+        "name": "model.layers.3.mlp.gate_up_proj",
+        "group": "protected",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              16384,
+              1024
+            ]
+          }
+        }
+      },
+      {
+        "scope": "mtp",
+        "name": "model.layers.3.mlp.down_proj",
+        "group": "protected",
+        "method": "UnquantizedLinearMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              1024,
+              8192
+            ]
+          }
+        }
+      },
+      {
+        "scope": "mtp",
+        "name": "model.embed_tokens",
+        "group": "protected",
+        "method": "UnquantizedEmbeddingMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              262144,
+              3840
+            ]
+          }
+        }
+      },
+      {
+        "scope": "mtp",
+        "name": "lm_head",
+        "group": "protected",
+        "method": "UnquantizedEmbeddingMethod",
+        "quantized": false,
+        "kv_cache_adapter": false,
+        "module_cache_dtype": null,
+        "kernel": "NoneType",
+        "quant_spec": "not applicable",
+        "parameters": {
+          "weight": {
+            "dtype": "torch.bfloat16",
+            "shape": [
+              262144,
+              1024
+            ]
+          }
+        }
+      }
+    ],
+    "mtp_found": true
+  }
+]
