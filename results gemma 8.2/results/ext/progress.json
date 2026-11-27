@@ -1,0 +1,32 @@
+{
+  "G0:K0:fam": {
+    "state": "done",
+    "time": 1794377058.0861297,
+    "seconds": 1987.0289585590363
+  },
+  "G0:K2:fam": {
+    "state": "done",
+    "time": 1794378276.24698,
+    "seconds": 977.2102963924408
+  },
+  "GF1:K2:fam": {
+    "state": "failed",
+    "time": 1794379070.1392655,
+    "error": "gate GF1 K=2: FAIL | textvqa 0.00 vs BF16 0.61 cap 25% FAIL | chartqa 0.00 vs BF16 0.50 cap 100% FAIL | mmstar 0.00 vs BF16 0.62 cap 25% FAIL | omnidoc_ocr 1.00 vs BF16 0.10 cap 0% FAIL"
+  },
+  "GF1:K0:fam": {
+    "state": "failed",
+    "time": 1794379070.9723115,
+    "error": "skipped by the quality gate: gate GF1 K=2: FAIL | textvqa 0.00 vs BF16 0.61 cap 25% FAIL | chartqa 0.00 vs BF16 0.50 cap 100% FAIL | mmstar 0.00 vs BF16 0.62 cap 25% FAIL | omnidoc_ocr 1.00 vs BF16 0.10 cap 0% FAIL"
+  },
+  "GF4:K0:fam": {
+    "state": "failed",
+    "time": 1794379599.7823243,
+    "error": "gate GF4 K=0: FAIL | textvqa 0.00 vs BF16 0.61 cap 25% FAIL | chartqa 0.00 vs BF16 0.50 cap 100% FAIL | mmstar 0.00 vs BF16 0.62 cap 62% FAIL | omnidoc_ocr 1.00 vs BF16 0.10 cap 12% FAIL"
+  },
+  "GF4:K2:fam": {
+    "state": "failed",
+    "time": 1794379600.6147456,
+    "error": "skipped by the quality gate: gate GF4 K=0: FAIL | textvqa 0.00 vs BF16 0.61 cap 25% FAIL | chartqa 0.00 vs BF16 0.50 cap 100% FAIL | mmstar 0.00 vs BF16 0.62 cap 62% FAIL | omnidoc_ocr 1.00 vs BF16 0.10 cap 12% FAIL"
+  }
+}
