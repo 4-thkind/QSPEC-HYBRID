@@ -1,0 +1,3 @@
+CUDA 13.0 + FlashInfer sampler PASSED: [754]
+
+2026-11-11 05:18:57,124 - INFO - core.py:564 - flashinfer.jit: Building JIT module sampling; this can take several minutes on first use.
